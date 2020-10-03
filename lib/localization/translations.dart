@@ -28,9 +28,15 @@ class Translations {
   }
 
   get currentLanguage => locale.languageCode;
-
+/*
   String text(String key) {
     return _localisedValues[key] ?? "$key not found";
   }
-
+*/
+  String text(String key,[String group]) {
+    if (group==null)
+      return _localisedValues[key] ?? "$key not found";
+    else
+      return _localisedValues[group][key] ?? "$group, $key not found";
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
 
 class PlanetCard extends StatelessWidget {
@@ -8,6 +9,9 @@ class PlanetCard extends StatelessWidget {
   PlanetCard ({this.planet});
 
   Widget build(BuildContext context){
+
+    var translator = Translations.of(context);
+
     return Card(
         margin: EdgeInsets.all(16.0),
         child: Container(
@@ -33,7 +37,7 @@ class PlanetCard extends StatelessWidget {
                   ),
                   RaisedButton.icon(
                       icon:Icon(Icons.search),
-                      label: Text("Saber Mas"),
+                      label: Text("10_things"/*translator.text("10_things")*/),
                       onPressed: () {
                         showDialog(
                             context: context,
@@ -46,10 +50,23 @@ class PlanetCard extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(8.0, 20.0, 8.0, 8.0),
                                     height: 400.0,
                                     width: 360.0,
-                                    child:Text(
-                                        planet.overview,
-                                        style:TextStyle(fontSize: 16.0, color: textColor)
+                                    child: ListView(
+                                        children: <Widget>[
+                                        SizedBox(height: 20),
+                                    Center(
+                                      child: Text(
+                                        //"${translator.text("10_things")} ${planet.name}",
+                                        "10_things ${planet.name}",
+                                        style: TextStyle(fontSize: 24, color: Colors.blue, fontWeight: FontWeight.bold),
+                                      ),
                                     ),
+                                    SizedBox(height: 20),
+                                    Column(
+                                    children:planet.stats.map((stat) => StatCard(order:stat.order,name:stat.name,description:stat.description)).toList(),
+                                    ),
+
+                                    ]
+                                  )
                                   )
                               );
                             }
@@ -61,4 +78,39 @@ class PlanetCard extends StatelessWidget {
         )
     );
   }
+}
+
+Widget StatCard({int order,String name, String description}) {
+
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+    child: Column(
+      children: <Widget>[
+        SizedBox(height: 12),
+        Container(height: 2, color: Colors.teal),
+        SizedBox(height: 12),
+        Column(
+          children: <Widget>[
+             Container(
+              width: 60.0,
+              height: 60.0,
+              decoration: new BoxDecoration(
+                color: Colors.teal[100],
+                shape: BoxShape.circle,
+              ),
+               child: Center (
+                 child:Text(order.toString(),style:TextStyle(fontSize: 20.0 )),
+               ),
+             ),
+
+            SizedBox(width: 16.0),
+            Text(name,style:TextStyle(fontSize: 20.0)),
+            SizedBox(height:12.0),//separador
+            Text(description, style:TextStyle(fontSize: 16.0)),
+          ],
+        ),
+      ],
+    ),
+  );
+
 }
