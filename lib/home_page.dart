@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:space_quest/application.dart';
 import 'package:space_quest/begin_quest.dart';
 import 'package:space_quest/help_page.dart';
