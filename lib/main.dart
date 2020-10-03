@@ -24,7 +24,7 @@ class LocalisedAppState extends State<LocalisedApp> {
   @override
   void initState() {
     super.initState();
-    
+
     _newLocaleDelegate = TranslationsDelegate(newLocale: null);
     application.onLocaleChanged = onLocaleChange;
   }
