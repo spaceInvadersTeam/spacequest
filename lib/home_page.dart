@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:space_quest/application.dart';
+import 'package:space_quest/begin_quest.dart';
 import 'package:space_quest/help_page.dart';
 import 'package:space_quest/localization/translations.dart';
 
-class HomePage extends StatefulWidget {
+class  HomePage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
@@ -37,7 +39,6 @@ class HomePageState extends State<HomePage> {
 
     var translator = Translations.of(context);
 
-  
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
@@ -53,17 +54,25 @@ class HomePageState extends State<HomePage> {
           ],
         ),
         key: scaffoldKey,
-        body: new Stack(
+        body: PageView(
             children: <Widget>[
-              getBackground(),
-              getHeader(translator),
-              getBody(translator),
-        ]
-        )
+              getMainPage(translator),
+        HelpPage(translator: translator)
+        ])
       ),
     );
   }
-  
+
+  getMainPage(Translations translator) {
+    return new Stack(
+        children: <Widget>[
+          getBackground(),
+          getHeader(translator),
+          getBody(translator),
+        ]
+    );
+  }
+
   getBackground() {
     return new Container(
       decoration: new BoxDecoration(
@@ -153,7 +162,7 @@ class HomePageState extends State<HomePage> {
           ),
         ),
         child: new Center(
-          child: new Text("S T A R T",
+          child: new Text(translator.text("start"),
             style: const TextStyle(color: Colors.white, fontSize: 24.0, fontWeight: FontWeight.normal),),
         ),
       ),
@@ -162,7 +171,7 @@ class HomePageState extends State<HomePage> {
           context,
           MaterialPageRoute(
               builder: (context) =>
-                  HelpPage(
+                  BeginQuest(
                     translator: translator,
                   )),
         );
@@ -170,6 +179,7 @@ class HomePageState extends State<HomePage> {
     );
 
   }
+
 
   void onLocaleChange(Locale locale) async {
     setState(() {
