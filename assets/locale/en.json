@@ -4,6 +4,18 @@
   "help_button": "How to play",
   "help_page_title": "Help page",
   "help_text_1": "help text 1",
-  "help_text_2": "help text 2"
+  "help_text_2": "help text 2",
+  "10_things": "10 Need-to-Know Things",
+  "10_things_about": "10 Need-to-Know Things About",
+  "mercury" : {
+    "name": "Mercury",
+    "overview": "Mercury is the smallest planet in our solar system. It’s just a little bigger than Earth’s moon. It is the closest planet to the sun, but it’s actually not the hottest. Venus is hotter.",
+    "s1_name": "Smallest",
+    "s1_description": "Mercury is the smallest planet in our solar system—only slightly larger than Earth's Moon.",
+    "s2_name": "Insider",
+    "s2_description": "It is the closest planet to the Sun at a distance of about 36 million miles (58 million kilometers) or 0.39 AU.",
+    "s3_name": "Long days, short years",
+    "s3_description": "One day on Mercury (the time it takes for Mercury to rotate or spin once with respect to the stars) takes 59 Earth days. One day-night cycle on Mercury takes 175.97 Earth days. Mercury makes a complete orbit around the Sun (a year in Mercury time) in just 88 Earth days. "
+  }
 
 }
