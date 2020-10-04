@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:space_quest/countdown_timer.dart';
 import 'package:space_quest/localization/translations.dart';
@@ -17,12 +19,29 @@ class PlanetOverviewState extends State<PlanetOverview> {
   @override
   Widget build(BuildContext context) {
     var translator = Translations.of(context);
-    Planet testPlanet = new Planet.localized(
-        translator, "mercury", "assets/images/mercury3.sp.jpg");
+    Planet planet =null;
+    //get a random planet
+    var rng = new Random();
+
+    switch(rng.nextInt(4)) {
+      case 0: planet = new Planet.localized(translator, "mercury", "assets/images/mercury3.sp.jpg");
+        break;
+      case 1: planet = new Planet.localized(translator, "mars", "assets/images/mars1.sp.jpg");
+        break;
+      case 2: planet = new Planet.localized(translator, "saturn", "assets/images/saturn2.sp.jpg");
+        break;
+      case 3: planet = new Planet.localized(translator, "neptune", "assets/images/neptune3.sp.jpg");
+        break;
+      default:
+        planet = new Planet.localized(translator, "mercury", "assets/images/mercury3.sp.jpg");
+    }
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Space Quest'),
+          title: Text(
+            planet.name,
+            style: Theme.of(context).textTheme.headline2,
+          ),
           centerTitle: true,
           backgroundColor: Theme.of(context).primaryColor,
         ),
@@ -38,8 +57,8 @@ class PlanetOverviewState extends State<PlanetOverview> {
           Expanded(
               flex: 10,
               child: PageView(children: <Widget>[
-                PlanetCard(planet: testPlanet),
-                StatsList(planet: testPlanet)
+                PlanetCard(planet: planet),
+                StatsList(planet: planet)
               ]))
         ]));
   }

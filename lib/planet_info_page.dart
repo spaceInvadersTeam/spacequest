@@ -18,11 +18,11 @@ class PlanetCard extends StatelessWidget {
       ),
       SingleChildScrollView(
           child: Column(children: <Widget>[
-        Text(
+        /*Text(
           planet.name,
           style: Theme.of(context).textTheme.headline2,
         ),
-        SizedBox(height: 6.0), //separador
+        SizedBox(height: 6.0), //separador*/
         Container(
           padding: EdgeInsets.all(24.0),
           child: ClipRRect(
