@@ -13,7 +13,7 @@ class HelpPage2 extends StatelessWidget {
       body:Container(
         decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/fondo_3_slide.png"),
+          image: AssetImage("assets/images/F3.png"),
      fit: BoxFit.fitWidth
     ) ,
     ),

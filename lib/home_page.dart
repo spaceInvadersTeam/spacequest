@@ -94,7 +94,7 @@ class HomePageState extends State<HomePage> {
     return new Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/fondo_1.jpeg"),
+            image: AssetImage("assets/images/F1.png"),
             fit: BoxFit.fill
         ) ,
       ),
