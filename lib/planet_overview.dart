@@ -21,14 +21,7 @@ class PlanetOverviewState extends State<PlanetOverview> {
     var translator = Translations.of(context);
     Planet testPlanet =new Planet.localized(translator,"mercury","assets/images/mercury3.sp.jpg");
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: new ThemeData(
-        primaryColor: Colors.amber,
-        primaryColorDark: Colors.amber,
-        accentColor: Colors.amber,
-      ),
-      home: new Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('Space Quest'),
           centerTitle: true,
@@ -40,8 +33,6 @@ class PlanetOverviewState extends State<PlanetOverview> {
               PlanetCard(translator:translator,planet: testPlanet),
               StatsList(translator:translator,planet: testPlanet)
             ])
-
-      ),
     );
   }
 }

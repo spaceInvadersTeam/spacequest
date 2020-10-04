@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:space_quest/home_page.dart';
+import 'package:space_quest/begin_quest.dart';
 import 'package:space_quest/application.dart';
 import 'package:space_quest/localization/translations_delegate.dart';
 
 Future<Null> main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  //SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(new LocalisedApp());
 }
 
@@ -36,6 +37,11 @@ class LocalisedAppState extends State<LocalisedApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      /*routes:{
+        "/": (context) =>HomePage(),
+        "/start_game": (context) =>BeginQuest(),
+
+      },*/
       localizationsDelegates: [
         _newLocaleDelegate,
         //provides localised strings

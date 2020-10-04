@@ -23,14 +23,7 @@ class BeginQuestState extends State<BeginQuest> {
 
     var translator = Translations.of(context);
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: new ThemeData(
-        primaryColor: Colors.amber,
-        primaryColorDark: Colors.amber,
-        accentColor: Colors.amber,
-      ),
-      home: new Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('Space Quest'),
           centerTitle: true,
@@ -48,7 +41,6 @@ class BeginQuestState extends State<BeginQuest> {
           ),
         ),
 
-      ),
     );
   }
 }
