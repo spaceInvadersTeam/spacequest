@@ -4,13 +4,12 @@ import 'planet.dart';
 
 class PlanetCard extends StatelessWidget {
 
-  final Planet planet;
   final Color textColor=Colors.teal;
-  PlanetCard ({this.planet});
+  final Planet planet;
+  final Translations translator;
+  PlanetCard ({this.translator,this.planet});
 
   Widget build(BuildContext context){
-
-    var translator = Translations.of(context);
 
     return Card(
         margin: EdgeInsets.all(16.0),
@@ -35,6 +34,7 @@ class PlanetCard extends StatelessWidget {
                       planet.overview,
                       style:TextStyle(fontSize: 16.0, color: textColor)
                   ),
+                  /*
                   RaisedButton.icon(
                       icon:Icon(Icons.search),
                       label: Text("10_things"/*translator.text("10_things")*/),
@@ -73,6 +73,7 @@ class PlanetCard extends StatelessWidget {
                         );
                       }
                   ),
+                  */
                 ]
             )
         )
@@ -80,8 +81,44 @@ class PlanetCard extends StatelessWidget {
   }
 }
 
-Widget StatCard({int order,String name, String description}) {
 
+class StatsList extends StatelessWidget {
+  final Planet planet;
+  final Translations translator;
+  StatsList({this.translator,this.planet});
+
+  Widget build(BuildContext context) {
+    return Container(
+        padding: EdgeInsets.fromLTRB(8.0, 20.0, 8.0, 8.0),
+        height: 400.0,
+        width: 360.0,
+        child: ListView(
+            children: <Widget>[
+              SizedBox(height: 20),
+              Center(
+                child: Text(
+                  "${translator.text("10_things_about")} ${planet.name}",
+                  //"10_things ${planet.name}",
+                  style: TextStyle(fontSize: 24,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(height: 20),
+              Column(
+                children: planet.stats.map((stat) =>
+                    StatCard(order: stat.order,
+                        name: stat.name,
+                        description: stat.description)).toList(),
+              ),
+
+            ]
+        )
+    );
+  }
+}
+
+Widget StatCard({int order,String name, String description}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 20.0),
     child: Column(
