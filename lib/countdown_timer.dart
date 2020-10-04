@@ -38,7 +38,7 @@ class _OtpTimerState extends State<OtpTimer> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Icon(Icons.timer),
+        Icon(Icons.timer,size:20),
         SizedBox(
           width: 5,
         ),

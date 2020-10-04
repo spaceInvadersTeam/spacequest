@@ -4,13 +4,11 @@ import 'planet.dart';
 
 class PlanetCard extends StatelessWidget {
 
-  final Color textColor=Colors.teal;
   final Planet planet;
-  final Translations translator;
-  PlanetCard ({this.translator,this.planet});
+  PlanetCard ({this.planet});
 
   Widget build(BuildContext context){
-
+    var translator = Translations.of(context);
     return Card(
         margin: EdgeInsets.all(16.0),
         child: Container(
@@ -19,7 +17,7 @@ class PlanetCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                       planet.name,
-                      style:TextStyle(fontSize: 22.0,color: textColor )
+                      style:Theme.of(context).textTheme.headline2,
                   ),
                   SizedBox(height:6.0),//separador
                   Container(
@@ -32,7 +30,7 @@ class PlanetCard extends StatelessWidget {
                   SizedBox(height:6.0),//separador
                   Text(
                       planet.overview,
-                      style:TextStyle(fontSize: 16.0, color: textColor)
+                      style:Theme.of(context).textTheme.bodyText2,
                   ),
                   /*
                   RaisedButton.icon(
@@ -84,10 +82,10 @@ class PlanetCard extends StatelessWidget {
 
 class StatsList extends StatelessWidget {
   final Planet planet;
-  final Translations translator;
-  StatsList({this.translator,this.planet});
+  StatsList({this.planet});
 
   Widget build(BuildContext context) {
+    var translator = Translations.of(context);
     return Container(
         padding: EdgeInsets.fromLTRB(8.0, 20.0, 8.0, 8.0),
         height: 400.0,
@@ -102,9 +100,7 @@ class StatsList extends StatelessWidget {
                     "${translator.text("10_things_about")} ${planet.name}",
                     //"10_things ${planet.name}",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 24,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.headline2,
                   ),
                 ),
               ),
@@ -122,36 +118,46 @@ class StatsList extends StatelessWidget {
   }
 }
 
-Widget StatCard({int order,String name, String description}) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-    child: Column(
-      children: <Widget>[
-        SizedBox(height: 12),
-        Container(height: 2, color: Colors.teal),
-        SizedBox(height: 12),
-        Column(
-          children: <Widget>[
-             Container(
-              width: 60.0,
-              height: 60.0,
-              decoration: new BoxDecoration(
-                color: Colors.teal[100],
-                shape: BoxShape.circle,
+class StatCard extends StatelessWidget {
+  final int order;
+  final String name;
+  final String description;
+
+  StatCard({this.order, this.name, this.description});
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 12),
+          Container(height: 2, color: Theme.of(context).primaryColor),
+          SizedBox(height: 12),
+          Column(
+            children: <Widget>[
+              Container(
+                width: 60.0,
+                height: 60.0,
+                decoration: new BoxDecoration(
+                  color: Theme.of(context).primaryColorLight,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(order.toString(), style: Theme
+                      .of(context)
+                      .textTheme
+                      .bodyText1),
+                ),
               ),
-               child: Center (
-                 child:Text(order.toString(),style:TextStyle(fontSize: 20.0 )),
-               ),
-             ),
 
-            SizedBox(width: 16.0),
-            Text(name,style:TextStyle(fontSize: 20.0)),
-            SizedBox(height:12.0),//separador
-            Text(description, style:TextStyle(fontSize: 16.0)),
-          ],
-        ),
-      ],
-    ),
-  );
-
+              SizedBox(width: 20.0),
+              Text(name, style: TextStyle(fontSize: 20.0)),
+              SizedBox(height: 12.0), //separador
+              Text(description, style: TextStyle(fontSize: 16.0)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
 }
