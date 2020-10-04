@@ -14,7 +14,7 @@ class StatsList extends StatelessWidget {
       Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/F4.png"), fit: BoxFit.fitWidth),
+              image: AssetImage("assets/images/FONDO6.png"), fit: BoxFit.fitWidth),
         ),
       ),
         Container(

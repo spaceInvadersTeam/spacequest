@@ -13,7 +13,7 @@ class PlanetCard extends StatelessWidget {
       Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/F4.png"), fit: BoxFit.fitWidth),
+              image: AssetImage("assets/images/FONDO5.png"), fit: BoxFit.fitWidth),
         ),
       ),
       SingleChildScrollView(

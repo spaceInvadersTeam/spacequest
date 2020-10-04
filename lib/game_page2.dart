@@ -47,7 +47,7 @@ class GamePageState2 extends State<GamePage2> {
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/images/F8.png"),
+                    image: AssetImage("assets/images/FONDO4.png"),
                     fit: BoxFit.fill
                 ) ,
               ),

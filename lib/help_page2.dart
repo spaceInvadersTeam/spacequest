@@ -13,7 +13,7 @@ class HelpPage2 extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/images/F2.png"),
+                image: AssetImage("assets/images/FONDO3.png"),
                 fit: BoxFit.fitWidth
               ),
             ),
@@ -44,7 +44,7 @@ class HelpPage2 extends StatelessWidget {
                         new TextSpan( text: "\n"+"\n"),
                         new TextSpan( text: '4 ', style: const TextStyle(fontWeight: FontWeight.bold),),
                         new TextSpan( text: translator.text('help_text_2_4')),
-                        new TextSpan( text: "\n"+"\n"),
+                        //new TextSpan( text: "\n"+"\n"),
                       ]
                     )
                   )

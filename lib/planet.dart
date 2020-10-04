@@ -3,6 +3,7 @@ class Planet {
   String overview;
   String imgPath;
   List<Stat> stats;
+  List<Review> reviews;
 
   Planet({this.name, this.overview, this.imgPath});
 
@@ -35,4 +36,11 @@ class Stat {
 
   Stat({this.order, this.name, this.description});
 
+}
+
+class Review {
+  final String title;
+  final String description;
+
+  Review({this.title, this.description});
 }

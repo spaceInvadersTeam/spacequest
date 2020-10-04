@@ -38,6 +38,14 @@ class HomePageState extends State<HomePage> {
     var translator = Translations.of(context);
 
     return Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: new AppBar(
+          actions: <Widget>[
+            getLanguageSelectionWidget()
+          ],
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+        ),
         body: PageView(
             children: <Widget>[
               getMainPage(translator),
@@ -50,17 +58,10 @@ class HomePageState extends State<HomePage> {
   getMainPage(Translations translator) {
     return Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: new AppBar(
-        actions: <Widget>[
-        getLanguageSelectionWidget()
-      ],
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-    ),
     body: new Stack(
         children: <Widget>[
           getBackground(),
-          getLogo(),
+          //getLogo(),
           getStartButton(translator),
         ]
     )
@@ -90,7 +91,7 @@ class HomePageState extends State<HomePage> {
     return new Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/F1.png"),
+            image: AssetImage("assets/images/FONDO1.png"),
             fit: BoxFit.fill
         ) ,
       ),
@@ -134,6 +135,7 @@ class HomePageState extends State<HomePage> {
       // overflow menu
       onSelected: _select,
       icon: new Icon(Icons.language, color: Colors.pink),
+      color: Colors.pink[300],
       itemBuilder: (BuildContext context) {
         return application.supportedLanguages
             .map<PopupMenuItem<String>>((String choice) {
