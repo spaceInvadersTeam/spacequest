@@ -85,7 +85,7 @@
     "s7_name": "GLORIOUS RINGS",
     "s7_description": "Saturn has the most spectacular ring system, with seven rings and several gaps and divisions between them.",
     "s8_name": "RARE DESTINATION",
-    "s8_description": "No evidence for life has been found on Mercury. Daytime Temperatures can reach 430 degrees Celsius (800 degrees Fahrenheit) and drop to -180 degrees Celsius (-290 degrees Fahrenheit) at night. It is unlikely life (as we know it) could survive on this planet.",
+    "s8_description": "Few missions have visited Saturn: Pioneer 11 and Voyagers 1 and 2 flew by; But Cassini orbited Saturn 294 times from 2004 to 2017",
     "s9_name": "LIFELESS BEHEMOTH",
     "s9_description": "Saturn cannot support life as we know it, but some of Saturn's moons have conditions that might support life.",
     "s10_name": "ADD A DASH OF EARTH",
@@ -101,7 +101,7 @@
     "s3_name": "SHORT DAY, LONG YEAR",
     "s3_description": "Neptune takes about 16 hours to rotate once (a Neptunian day), and about 165 Earth years to orbit the sun (a Neptunian year).",
     "s4_name": "ICE GIANT",
-    "s4_description": "Neptune takes about 16 hours to rotate once (a Neptunian day), and about 165 Earth years to orbit the sun (a Neptunian year).",
+    "s4_description": "Neptune is an ice giant. Most of its mass is a hot, dense fluid of \"icy\" materials – water, methane and ammonia – above a small rocky core.",
     "s5_name": "GASSY",
     "s5_description": "Neptune's atmosphere is made up mostly of molecular hydrogen, atomic helium and methane.",
     "s6_name": "MOONS",
@@ -185,7 +185,7 @@
     "s9_name": "LIFE ON VENUS",
     "s9_description": "Venus’ extreme temperatures and acidic clouds make it an unlikely place for life as we know it.",
     "s10_name": "SUPER ROTATING ATMOSPHERE",
-    "s10_description": "SUPER ROTATING ATMOSPHERE"
+    "s10_description": "While the surface rotates slowly, the winds blow at hurricane force, sending clouds completely around the planet every five days."
   }
 
 }
