@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:space_quest/countdown_timer.dart';
 import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
-import 'planet_card.dart';
+import 'planet_stats_page.dart';
+import 'planet_info_page.dart';
 import 'package:flutter/widgets.dart';
 
 class PlanetOverview extends StatefulWidget {
-
   @override
   State<PlanetOverview> createState() {
     return PlanetOverviewState();
@@ -14,12 +14,11 @@ class PlanetOverview extends StatefulWidget {
 }
 
 class PlanetOverviewState extends State<PlanetOverview> {
-
   @override
   Widget build(BuildContext context) {
-
     var translator = Translations.of(context);
-    Planet testPlanet =new Planet.localized(translator,"mercury","assets/images/mercury3.sp.jpg");
+    Planet testPlanet = new Planet.localized(
+        translator, "mercury", "assets/images/mercury3.sp.jpg");
 
     return Scaffold(
         appBar: AppBar(
@@ -28,24 +27,20 @@ class PlanetOverviewState extends State<PlanetOverview> {
           backgroundColor: Theme.of(context).primaryColor,
         ),
         backgroundColor: const Color(0xFFF1F1EF),
-        body: /*PageView(
+        body:
+            /*PageView(
             children: <Widget>[
               PlanetCard(translator:translator,planet: testPlanet),
               StatsList(translator:translator,planet: testPlanet)
             ]),*/
-          Column(
-              children: <Widget>[
-              Expanded( flex: 1, child:OtpTimer()),
-              Expanded(
+            Column(children: <Widget>[
+          //Expanded( flex: 1, child:OtpTimer()),
+          Expanded(
               flex: 10,
-              child: PageView(
-                  children: <Widget>[
-                    PlanetCard(planet: testPlanet),
-                    StatsList(planet: testPlanet)
-                  ])
-              )
-          ]
-          )
-    );
+              child: PageView(children: <Widget>[
+                PlanetCard(planet: testPlanet),
+                StatsList(planet: testPlanet)
+              ]))
+        ]));
   }
 }

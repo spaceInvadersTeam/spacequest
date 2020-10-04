@@ -1,7 +1,5 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:space_quest/localization/translations.dart';
 
 class HelpPage extends StatelessWidget {
@@ -32,10 +30,7 @@ class HelpPage extends StatelessWidget {
                 padding:  EdgeInsets.fromLTRB(15, 15, 15, 15),
                 width: MediaQuery.of(context).size.width * 0.9,
                 child : new RichText(text:  new TextSpan(
-                    style:  GoogleFonts.raleway( textStyle: new TextStyle(
-                      fontSize: 22.0,
-                      color: Colors.black,
-                    )),
+                    style:  Theme.of(context).textTheme.bodyText2,
                   children: <TextSpan>[
                     new TextSpan( text: translator.text('help_text_1_1')),
                     new TextSpan( text: translator.text('help_text_1_2'), style: const TextStyle(fontWeight: FontWeight.bold), ),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
 
@@ -160,4 +160,4 @@ class StatCard extends StatelessWidget {
       ),
     );
   }
-}
+}*/

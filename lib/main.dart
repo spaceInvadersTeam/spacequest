@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:space_quest/home_page.dart';
 import 'package:space_quest/application.dart';
@@ -48,8 +49,12 @@ class LocalisedAppState extends State<LocalisedApp> {
             textTheme: TextTheme(
                 //headline1: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.black26),
                 headline2: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.black87),
-                //bodyText1: TextStyle(fontSize: 20.0, color: Colors.teal),
-                //bodyText2: TextStyle(fontSize: 16.0, color: Colors.teal),
+                bodyText1: GoogleFonts.raleway(
+                  textStyle: new TextStyle(fontSize: 20.0, color: Colors.black,),
+                ),
+                bodyText2: GoogleFonts.raleway(
+                  textStyle: new TextStyle(fontSize: 22.0, color: Colors.black,),
+                ),
             ),
         ),
       home: HomePage(),
