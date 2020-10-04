@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:space_quest/application.dart';
-import 'package:space_quest/begin_quest.dart';
+import 'package:space_quest/help_page2.dart';
 import 'package:space_quest/planet_overview.dart';
 import 'package:space_quest/help_page.dart';
-import 'package:space_quest/localization/help_page2.dart';
 import 'package:space_quest/localization/translations.dart';
 
 class  HomePage extends StatefulWidget {
@@ -38,17 +37,14 @@ class HomePageState extends State<HomePage> {
 
     var translator = Translations.of(context);
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new Scaffold(
+    return Scaffold(
         body: PageView(
             children: <Widget>[
               getMainPage(translator),
-              HelpPage(translator: translator),
-              HelpPage2(translator: translator)
+              HelpPage(),
+              HelpPage2(),
         ])
-      ),
-    );
+      );
   }
 
   getMainPage(Translations translator) {
@@ -144,6 +140,7 @@ class HomePageState extends State<HomePage> {
     return new InkWell(
       child: new Image.asset("assets/images/Recurso_8.png", scale: 3.5,),
       onTap: () {
+       // Navigator.pushNamed(context, 'start_game');
         Navigator.push(
           context,
           MaterialPageRoute(

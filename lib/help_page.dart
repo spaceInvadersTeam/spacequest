@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:space_quest/localization/translations.dart';
 
 class HelpPage extends StatelessWidget {
-  final Translations translator;
-
-  HelpPage({this.translator});
 
   @override
   Widget build(BuildContext context) {
+    var translator = Translations.of(context);
     return Scaffold(
       body:Container(
         decoration: BoxDecoration(
@@ -20,7 +18,5 @@ class HelpPage extends StatelessWidget {
     ),)
     ;
   }
-
-
 
 }
