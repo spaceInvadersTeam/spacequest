@@ -14,6 +14,9 @@
   "help_text_2_2": "In each round, we will go to a different planet. Based on the characteristics of the planet, imagine and draw a creature that could inhabit it",
   "help_text_2_3": "When the time is up, you and your friends must vote, in turn, to choose which creature you liked the most. You can take into account which is the prettiest, the best drawn, or the one that best suits the planet, but it is not worth choosing your own creature!",
   "help_text_2_4": "Each vote is worth one point, and at the end of all the rounds, the one with the most points wins! Let the game begin!",
+  "player_name": "Player name",
+  "rounds": "Number of rounds",
+  "roundtime": "Duration of round (sec)",
   "10_things": "10 Need-to-Know Things",
   "10_things_about": "10 Need-to-Know Things About",
   "mercury" : {

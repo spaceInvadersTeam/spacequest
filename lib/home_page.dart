@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:space_quest/application.dart';
+import 'package:space_quest/game_page1.dart';
 import 'package:space_quest/help_page2.dart';
-import 'package:space_quest/planet_overview.dart';
 import 'package:space_quest/help_page.dart';
 import 'package:space_quest/localization/translations.dart';
 
@@ -113,7 +113,18 @@ class HomePageState extends State<HomePage> {
         bottom: 125,
         width: MediaQuery.of(context).size.width,
         child: Center(
-             child: getButton(translator),
+          child: new InkWell(
+            child: new Image.asset("assets/images/Recurso_8.png", scale: 3.5,),
+            onTap: () {
+              // Navigator.pushNamed(context, 'start_game');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        GamePage1()),
+              );
+            },
+          ),
         ),
     );
   }
@@ -133,23 +144,6 @@ class HomePageState extends State<HomePage> {
         }).toList();
       },
     );
-  }
-
-  
-  getButton(Translations translator) {
-    return new InkWell(
-      child: new Image.asset("assets/images/Recurso_8.png", scale: 3.5,),
-      onTap: () {
-       // Navigator.pushNamed(context, 'start_game');
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  PlanetOverview()),
-        );
-      },
-    );
-
   }
 
 

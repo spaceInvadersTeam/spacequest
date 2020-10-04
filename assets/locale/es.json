@@ -12,6 +12,9 @@
   "help_text_2_2": "En cada ronda iremos a un planeta distinto. Basándote en las características del planeta, imagina y dibuja una criatura que podría habitarlo",
   "help_text_2_3": "Cuando termina el tiempo, tu y tus amigos deberán votar, por turno, elegiedo cual es la criatura que mas le gustó. Puedes tener en cuenta cual es la mas linda, la mejor dibujada, o la que mejor se adpta a la descripción del planeta.¡Pero no vale elegir tu propia criatura!",
   "help_text_2_4": "Cada voto vale un punto, y al finalizar todas las rondas ¡Gana el jugador que tiene más puntos! ¡Que comience el juego!",
+  "player_name": "Nombre del Jugador",
+  "rounds": "Número de rondas",
+  "roundtime": "Duración de la ronda (seg)",
   "10_things": "10 Cosas que Necesitas Saber",
   "10_things_about": "10 Cosas que Necesitas Saber Sobre",
   "mercury" : {
