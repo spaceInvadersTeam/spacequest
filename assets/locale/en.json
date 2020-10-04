@@ -1,12 +1,7 @@
 {
   "title": "Space Quest",
-  "start": "S T A R T",
-  "help_button": "How to play",
-  "help_page_title": "Help page",
-  "help_text_1": "help text 1",
-  "help_text_2": "help text 2",
   "help_text_1_1": "Hi! I'm ",
-  "help_text_1_2": "Ruffo",
+  "help_text_1_2": "Plasmo",
   "help_text_1_3": ", and I'm from IO, one of the three largest moons of Jupiter.",
   "help_text_1_4": "Together we will embark on a journey of discovering towards the cosmos, imagining what creatures could inhabit our solar system",
   "help_text_1_5": "Will you help me imagine them?",
