@@ -1,8 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:space_quest/countdown_timer.dart';
 import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
 import 'planet_stats_page.dart';
@@ -24,17 +22,23 @@ class PlanetOverviewState extends State<PlanetOverview> {
     //get a random planet
     var rng = new Random();
 
-    switch(rng.nextInt(4)) {
-      case 0: planet = new Planet.localized(translator, "mercury", "assets/images/mercury3.sp.jpg");
+    switch(rng.nextInt(7)) {
+      case 0: planet = new Planet.localized(translator, "mercury", "assets/images/18_mercury_new.png");
         break;
-      case 1: planet = new Planet.localized(translator, "mars", "assets/images/mars1.sp.jpg");
+      case 1: planet = new Planet.localized(translator, "mars", "assets/images/19_mars.png");
         break;
-      case 2: planet = new Planet.localized(translator, "saturn", "assets/images/saturn2.sp.jpg");
+      case 2: planet = new Planet.localized(translator, "saturn", "assets/images/28_saturn.png");
         break;
-      case 3: planet = new Planet.localized(translator, "neptune", "assets/images/neptune3.sp.jpg");
+      case 3: planet = new Planet.localized(translator, "neptune", "assets/images/30_neptune.png");
         break;
-      default:
-        planet = new Planet.localized(translator, "mercury", "assets/images/mercury3.sp.jpg");
+      case 4: planet = new Planet.localized(translator, "jupiter", "assets/images/16_jupiter_new.png");
+        break;
+      case 5: planet = new Planet.localized(translator, "venus", "assets/images/27_venus_jq.png");
+        break;
+      case 6: planet = new Planet.localized(translator, "uranus", "assets/images/29_uranus.png");
+        break;
+      default: planet = new Planet.localized(translator, "mercury", "assets/images/18_mercury_new.png");
+
     }
 
     return Scaffold(
