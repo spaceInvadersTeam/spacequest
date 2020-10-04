@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:space_quest/help_page.dart';
 import 'package:space_quest/localization/translations.dart';
-import 'planet.dart';
-import 'planet_card.dart';
+import 'planet_overview.dart';
 import 'package:flutter/widgets.dart';
 
 class BeginQuest extends StatefulWidget {
@@ -24,8 +22,6 @@ class BeginQuestState extends State<BeginQuest> {
   Widget build(BuildContext context) {
 
     var translator = Translations.of(context);
-    //Planet testPlanet =new Planet(index:1,name:"Mercurio",overview:"Mercurio es el planeta más pequeño de nuestro sistema solar. Simplemente, es un poco más grande que la Luna de la Tierra. Es el planeta más cercano al Sol, pero no es realmente el más cálido. Venus es el más cálido.",imgPath:"assets/mercury3.sp.jpg");
-    Planet testPlanet =new Planet.localized(translator,"mercury","assets/images/mercury3.sp.jpg");
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -46,7 +42,7 @@ class BeginQuestState extends State<BeginQuest> {
             child: new Center(
               child: Container(
                 color: Colors.grey,
-                child: PlanetCard(planet: testPlanet),
+                child:  PlanetOverview(),
               ),
             ),
           ),

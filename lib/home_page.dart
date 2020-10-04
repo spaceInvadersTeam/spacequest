@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:space_quest/application.dart';
 import 'package:space_quest/begin_quest.dart';
+import 'package:space_quest/planet_overview.dart';
 import 'package:space_quest/help_page.dart';
 import 'package:space_quest/localization/help_page2.dart';
 import 'package:space_quest/localization/translations.dart';
@@ -147,9 +148,7 @@ class HomePageState extends State<HomePage> {
           context,
           MaterialPageRoute(
               builder: (context) =>
-                  BeginQuest(
-                    translator: translator,
-                  )),
+                  PlanetOverview()),
         );
       },
     );

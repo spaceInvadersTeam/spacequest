@@ -95,13 +95,17 @@ class StatsList extends StatelessWidget {
         child: ListView(
             children: <Widget>[
               SizedBox(height: 20),
-              Center(
-                child: Text(
-                  "${translator.text("10_things_about")} ${planet.name}",
-                  //"10_things ${planet.name}",
-                  style: TextStyle(fontSize: 24,
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child:Center(
+                  child: Text(
+                    "${translator.text("10_things_about")} ${planet.name}",
+                    //"10_things ${planet.name}",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 24,
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               SizedBox(height: 20),

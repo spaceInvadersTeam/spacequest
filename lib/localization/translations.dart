@@ -37,6 +37,8 @@ class Translations {
     if (group==null)
       return _localisedValues[key] ?? "$key not found";
     else
+      if (_localisedValues[group]==null)
+        return "$group, $key not found";
       return _localisedValues[group][key] ?? "$group, $key not found";
   }
 }
