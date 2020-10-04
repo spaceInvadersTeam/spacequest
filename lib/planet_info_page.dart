@@ -33,10 +33,7 @@ class PlanetCard extends StatelessWidget {
               child: Image.asset(planet.imgPath)),
         ),
         SizedBox(height: 6.0), //separador
-        Positioned(
-            top: MediaQuery.of(context).size.height * 0.1,
-            width: MediaQuery.of(context).size.width,
-            child: Center(
+        Center(
                 child: Container(
               /* decoration: BoxDecoration(
                                 color: Colors.white,
@@ -48,7 +45,7 @@ class PlanetCard extends StatelessWidget {
                   style: GoogleFonts.raleway(
                     textStyle: new TextStyle(fontSize: 20.0, color: Colors.white,),
                  )),
-              )))
+              ))
       ]))
     ]);
   }

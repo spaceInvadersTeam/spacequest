@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:space_quest/localization/translations.dart';
+import 'package:space_quest/planet_end_page.dart';
+import 'package:space_quest/planet_start_page.dart';
 import 'planet.dart';
 import 'planet_stats_page.dart';
 import 'planet_info_page.dart';
@@ -38,35 +40,17 @@ class PlanetOverviewState extends State<PlanetOverview> {
       case 6: planet = new Planet.localized(translator, "uranus", "assets/images/29_uranus.png");
         break;
       default: planet = new Planet.localized(translator, "mercury", "assets/images/18_mercury_new.png");
-
     }
 
     return Scaffold(
-        /*appBar: AppBar(
-          title: Text(
-            planet.name,
-            style: GoogleFonts.raleway(
-              textStyle: new TextStyle(fontSize: 20.0, color: Colors.white,),
-            ),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.transparent,
-        ),*/
-        backgroundColor: const Color(0xFFF1F1EF),
         body:
-            /*PageView(
-            children: <Widget>[
-              PlanetCard(translator:translator,planet: testPlanet),
-              StatsList(translator:translator,planet: testPlanet)
-            ]),*/
-            Column(children: <Widget>[
-         // Expanded( flex: 1,     //OtpTimer()               )),
-          Expanded(
-              flex: 10,
+          Container(
               child: PageView(children: <Widget>[
+                PlanetStartPage(planet: planet),
                 PlanetCard(planet: planet),
-                StatsList(planet: planet)
+                StatsList(planet: planet),
+                PlanetEndPage(),
               ]))
-        ]));
+        );
   }
 }
