@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:space_quest/help_page.dart';
 import 'package:space_quest/home_page.dart';
 import 'package:space_quest/application.dart';
 import 'package:space_quest/localization/translations_delegate.dart';
 
 Future<Null> main() {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(new LocalisedApp());
 }
 
