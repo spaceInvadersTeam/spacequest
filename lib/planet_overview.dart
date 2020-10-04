@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:space_quest/countdown_timer.dart';
 import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
@@ -37,14 +38,16 @@ class PlanetOverviewState extends State<PlanetOverview> {
     }
 
     return Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           title: Text(
             planet.name,
-            style: Theme.of(context).textTheme.headline2,
+            style: GoogleFonts.raleway(
+              textStyle: new TextStyle(fontSize: 20.0, color: Colors.white,),
+            ),
           ),
           centerTitle: true,
-          backgroundColor: Theme.of(context).primaryColor,
-        ),
+          backgroundColor: Colors.transparent,
+        ),*/
         backgroundColor: const Color(0xFFF1F1EF),
         body:
             /*PageView(
@@ -53,7 +56,7 @@ class PlanetOverviewState extends State<PlanetOverview> {
               StatsList(translator:translator,planet: testPlanet)
             ]),*/
             Column(children: <Widget>[
-          //Expanded( flex: 1, child:OtpTimer()),
+         // Expanded( flex: 1,     //OtpTimer()               )),
           Expanded(
               flex: 10,
               child: PageView(children: <Widget>[

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
 
@@ -17,11 +18,13 @@ class PlanetCard extends StatelessWidget {
         ),
       ),
       SingleChildScrollView(
+
           child: Column(children: <Widget>[
-        /*Text(
-          planet.name,
-          style: Theme.of(context).textTheme.headline2,
-        ),
+            SizedBox(height: 40.0), //separador*/
+            Text(planet.name,
+                style: GoogleFonts.raleway(
+                  textStyle: new TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.bold),
+                )),
         SizedBox(height: 6.0), //separador*/
         Container(
           padding: EdgeInsets.all(24.0),
@@ -42,8 +45,10 @@ class PlanetCard extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
               width: MediaQuery.of(context).size.width * 0.9,
               child: Text(planet.overview,
-                  style: Theme.of(context).textTheme.bodyText1),
-            ))),
+                  style: GoogleFonts.raleway(
+                    textStyle: new TextStyle(fontSize: 20.0, color: Colors.white,),
+                 )),
+              )))
       ]))
     ]);
   }

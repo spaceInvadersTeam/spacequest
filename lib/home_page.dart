@@ -4,6 +4,7 @@ import 'package:space_quest/game_page1.dart';
 import 'package:space_quest/help_page2.dart';
 import 'package:space_quest/help_page.dart';
 import 'package:space_quest/localization/translations.dart';
+import 'package:space_quest/planet_overview.dart';
 
 class  HomePage extends StatefulWidget {
 
@@ -68,24 +69,6 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  getLanguage() {
-    {
-      return new PopupMenuButton<String>(
-        // overflow menu
-        onSelected: _select,
-        icon: new Icon(Icons.language, color: Colors.pink),
-        itemBuilder: (BuildContext context) {
-          return application.supportedLanguages
-              .map<PopupMenuItem<String>>((String choice) {
-            return PopupMenuItem<String>(
-              value: choice,
-              child: Text(choice),
-            );
-          }).toList();
-        },
-      );
-    }
-  }
 
   getBackground() {
     return new Container(
@@ -111,7 +94,7 @@ class HomePageState extends State<HomePage> {
 
   getStartButton(Translations translator) {
     return new Positioned(
-        bottom: 125,
+        bottom: 50,
         width: MediaQuery.of(context).size.width,
         child: Center(
           child: new InkWell(
@@ -122,7 +105,8 @@ class HomePageState extends State<HomePage> {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        GamePage1()),
+                        //GamePage1()),
+                    PlanetOverview()),
               );
             },
           ),
@@ -135,7 +119,6 @@ class HomePageState extends State<HomePage> {
       // overflow menu
       onSelected: _select,
       icon: new Icon(Icons.language, color: Colors.pink),
-      color: Colors.pink[300],
       itemBuilder: (BuildContext context) {
         return application.supportedLanguages
             .map<PopupMenuItem<String>>((String choice) {

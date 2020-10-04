@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:space_quest/localization/translations.dart';
 import 'planet.dart';
 
@@ -22,16 +23,16 @@ class StatsList extends StatelessWidget {
             child: ListView(children: <Widget>[
               SizedBox(height: 20),
               Container(
-                decoration: BoxDecoration(
+                /*decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
-                ),
+                ),*/
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Center(
                   child: Text(
                     "${translator.text("10_things_about")} ${planet.name}",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline2,
+                      style: GoogleFonts.raleway( textStyle:TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
                   ),
                 ),
               ),
@@ -59,10 +60,10 @@ class StatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Container(
-        decoration: BoxDecoration(
+        /*decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
-        ),
+        ),*/
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         //margin: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
@@ -70,23 +71,25 @@ class StatCard extends StatelessWidget {
             SizedBox(height: 12),
             Column(
               children: <Widget>[
-                Container(
+                /*Container(
                   width: 60.0,
                   height: 60.0,
                   decoration: new BoxDecoration(
-                    color: Theme.of(context).primaryColorLight,
+                    color: Colors.pink,
                     shape: BoxShape.circle,
                   ),
                   child: Center(
                     child: Text(order.toString(),
-                        style: Theme.of(context).textTheme.bodyText2),
+                        style: GoogleFonts.raleway( textStyle:TextStyle(fontSize: 20.0, color: Colors.black, fontWeight: FontWeight.bold),)),
                   ),
                 ),
-
-                //SizedBox(width: 20.0),
-                Text(name, style: TextStyle(fontSize: 20.0)),
+*/
+                SizedBox(width: 20.0),
+                Text(name,  style: GoogleFonts.raleway( textStyle:TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),)),
                 SizedBox(height: 12.0), //separador
-                Text(description, style: Theme.of(context).textTheme.bodyText1),
+                Text(description, style: GoogleFonts.raleway(
+                  textStyle: TextStyle(fontSize: 18.0, color: Colors.white),)),
+
                 SizedBox(height: 12),
               ],
             ),
