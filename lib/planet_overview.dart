@@ -35,7 +35,7 @@ class PlanetOverviewState extends State<PlanetOverview> {
         break;
       case 4: planet = new Planet.localized(translator, "jupiter", "assets/images/16_jupiter_new.png");
         break;
-      case 5: planet = new Planet.localized(translator, "venus", "assets/images/27_venus_jq.png");
+      case 5: planet = new Planet.localized(translator, "venus", "assets/images/27_venus_jg.png");
         break;
       case 6: planet = new Planet.localized(translator, "uranus", "assets/images/29_uranus.png");
         break;
