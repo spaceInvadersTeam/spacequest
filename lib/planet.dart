@@ -4,7 +4,6 @@ class Planet {
   String imgPath;
   List<Stat> stats;
 
-
   Planet({this.name, this.overview, this.imgPath});
 
   Planet.localized( var translator, String planet, imgPath){
@@ -16,6 +15,13 @@ class Planet {
     stats.add(Stat(order:1,name:translator.text("s1_name",planet),description:translator.text("s1_description",planet)));
     stats.add(Stat(order:2,name:translator.text("s2_name",planet),description:translator.text("s2_description",planet)));
     stats.add(Stat(order:3,name:translator.text("s3_name",planet),description:translator.text("s3_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s4_name",planet),description:translator.text("s4_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s5_name",planet),description:translator.text("s5_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s6_name",planet),description:translator.text("s6_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s7_name",planet),description:translator.text("s7_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s8_name",planet),description:translator.text("s8_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s9_name",planet),description:translator.text("s9_description",planet)));
+    stats.add(Stat(order:3,name:translator.text("s10_name",planet),description:translator.text("s10_description",planet)));
 
   }
 
