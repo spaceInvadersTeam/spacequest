@@ -5,9 +5,7 @@ import 'package:flutter/widgets.dart';
 
 class BeginQuest extends StatefulWidget {
 
-  final Translations translator;
-
-  BeginQuest({this.translator});
+  BeginQuest();
 
   @override
   State<BeginQuest> createState() {
@@ -27,7 +25,7 @@ class BeginQuestState extends State<BeginQuest> {
         appBar: AppBar(
           title: Text('Space Quest'),
           centerTitle: true,
-          backgroundColor: Colors.teal,
+          backgroundColor: Theme.of(context).primaryColor,
         ),
         backgroundColor: const Color(0xFFF1F1EF),
         body: new Container(
