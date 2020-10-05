@@ -19,8 +19,12 @@ On start button, a random planet will be displayed, with some basic information,
 
 The round time (if desired), number of rounds and player score is left to be defined and controlled to the organizer of the game, but we have plans for that features in futures releases.
 
-There is an actually built app here https://github.com/spaceInvadersTeam/spacequest/blob/master/releases/app-release.apk
-Just donwload it and run it in an andriod device
+There is an actually built app for android here: 
+https://github.com/spaceInvadersTeam/spacequest/blob/master/releases/app-release.apk
+Just can just donwload it directly to your android device and run it
+
+A live demo of the app running on an android device can be seen in the following video: 
+https://drive.google.com/file/d/1W8XS1nq6_ya0fKsbKKFDvNFITWivKmMD/view?usp=sharing
 ## What is next
 
 We plan to add game configuration, such as number of rounds and time of the round.
